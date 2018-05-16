@@ -1,0 +1,23 @@
+MACRO
+ADD	&arg
+L	1 , &arg
+A	1 , =F'10'
+ST	1 , &arg
+MEND
+MACRO 
+HI &arg1 , &arg2
+L 1 , &arg1
+ST 2 , &arg2
+MEND
+PGM2 	START 	0
+	USING 	* , 15
+AC 	EQU 	2
+INDEX 	EQU 	3
+ADD	DATA1
+HI DATA2 , DATA3
+TOTAL 	EQU 	4
+	LR 	1 , TOTAL
+DATA1	DC	F'5'
+DATA2	DC	F'6'
+DATA3	DC	F'7'
+	END
