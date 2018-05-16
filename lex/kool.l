@@ -9,5 +9,6 @@ boolean|int|float|class|public|main|static|void|for|if|args|String|char|do|doubl
 [a-zA-Z]+ printf("Identifiers  ");
 [+,-,*,/,%]+ printf("Arithmetic Operators  ");
 [==,!=,>,<,>=,<=,]+ printf("Relational Operators  ");
+[}|)]+ printf("\nRight Parenthesis - %s",yytext);
 %%
 main(){yylex();}

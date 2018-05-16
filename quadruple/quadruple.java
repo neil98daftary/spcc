@@ -2,7 +2,7 @@ import java.util.*;
 
 public class quadruple{
 	static int count = 1;
-	public static void pop_two(Stack stack, char op){
+	public static void pop_two(Stack<String> stack, char op){
 		String op2 =(stack.pop()).toString();
 		String op1 =(stack.pop()).toString();
 		System.out.println("\n"+op+"\t"+op1+"\t"+op2+"\t"+"t"+count);
@@ -17,7 +17,7 @@ public class quadruple{
 
 		System.out.println("Enter postfix expression");
 		inp = sc.nextLine();
-		Stack st = new Stack();
+		Stack<String> st = new Stack<String>();
 		System.out.println("Op\tOp1\tOp2\tResult");
 		for(int i=0;i<inp.length();i++)
 		{
